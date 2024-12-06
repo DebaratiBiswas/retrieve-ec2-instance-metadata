@@ -19,27 +19,28 @@ Input required variables such as REGION, INSTANCE_ID, KEY_FILE_PATH and GITHUB_R
 Create a client object ec2_client that allows to interact with the Amazon EC2   
 
 **Function start_instances:**   
-AWS doc: [AWS SDK python3 boto3](https://docs.aws.amazon.com/code-library/latest/ug/python_3_ec2_code_examples.html)
-Start the EC2 instance: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2/client/start_instances.html#
-Wait until the instance is in running state. https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2/waiter/InstanceRunning.html#
+AWS doc: [AWS SDK python3 boto3](https://docs.aws.amazon.com/code-library/latest/ug/python_3_ec2_code_examples.html)   
+Start the EC2 instance: [start instances doc](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2/client/start_instances.html#)   
+Wait until the instance is in running state. [InstanceRunning doc](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2/waiter/InstanceRunning.html#)  
 
-**Function get_instance_public_ip:**
-Get the public ip of the EC2 instance: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2/client/describe_instances.html#
+**Function get_instance_public_ip:**   
+Get the public ip of the EC2 instance: [describe instances doc](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2/client/describe_instances.html#)   
 
-**Function execute_commands_via_ssh:**
-Create private key object: https://docs.paramiko.org/en/stable/api/keys.html#module-paramiko.rsakey
-Create ssh client object to establish connection to ec2 server specifying hostname, user and key. https://docs.paramiko.org/en/stable/api/client.html
-Set of commands to execute within ec2 server to install git, python3 and pip. clone the git repository and install packages mentioned in requirements.txt.
-Check if key for fetching particular instance metadata is specified else print the entire list of instance metadata.
-close ssh connection
+**Function execute_commands_via_ssh:**   
+Create private key object: [pramiko rsakey doc](https://docs.paramiko.org/en/stable/api/keys.html#module-paramiko.rsakey)    
+Create ssh client object to establish connection to ec2 server specifying hostname, user and key. [client doc](https://docs.paramiko.org/en/stable/api/client.html)   
+Set of commands to execute within ec2 server to install git, python3 and pip. clone the git repository and install packages mentioned in requirements.txt.  
+Check if key for fetching particular instance metadata is specified else print the entire list of instance metadata.    
+close ssh connection.   
 
-**ec2-instance-metadata.py:**
-Create a key object if any particular instance metadata key is passed 
+**ec2-instance-metadata.py:**   
+Create a key object if any particular instance metadata key is passed    
 
-**Function get_metadata:**
-Request for instance metadata value for the specified key and return the key and value as dict.
-Else Request for list of instance metadata value for ec2 server and return entire keys and values as dict. 
-Print the metadata in json format.
+**Function get_metadata:**    
+[Request doc](https://docs.python-requests.org/en/latest/index.html)   
+Request for instance metadata value for the specified key and return the key and value as dict.   
+Else Request for list of instance metadata value for ec2 server and return entire keys and values as dict.   
+Print the metadata in json format.   
 
 
 
