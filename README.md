@@ -18,8 +18,8 @@ Input required variables such as REGION, INSTANCE_ID, KEY_FILE_PATH and GITHUB_R
 
 Create a client object ec2_client that allows to interact with the Amazon EC2   
 
-**Function start_instances:**
-AWS doc: [AWS SDK python3 boto3]([URL](https://docs.aws.amazon.com/code-library/latest/ug/python_3_ec2_code_examples.html))
+**Function start_instances:**   
+AWS doc: [AWS SDK python3 boto3](https://docs.aws.amazon.com/code-library/latest/ug/python_3_ec2_code_examples.html)
 Start the EC2 instance: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2/client/start_instances.html#
 Wait until the instance is in running state. https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2/waiter/InstanceRunning.html#
 
