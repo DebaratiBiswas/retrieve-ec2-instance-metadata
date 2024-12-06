@@ -5,7 +5,7 @@ This repo is for fetching the metadata of the AWS EC2 instance. The solution is 
 Clone the git repo locally   
 ```bash
 git clone https://github.com/DebaratiBiswas/retrieve-ec2-instance-metadata
-
+```
 Install the required packages
 pip install requirements.txt
 Execute ec2-connect.py
