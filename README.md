@@ -15,6 +15,10 @@ Execute ec2-connect.py
 python3 ec2-connect.py   
 ```
 Input required variables such as REGION, INSTANCE_ID, KEY_FILE_PATH and GITHUB_REPO   
+REGION = AWS region where ec2 server is present   
+INSTANCE_ID  = EC2 instance id   
+KEY_FILE_PATH = local path to .pem private key file      
+GITHUB_REPO = path to GitHub repository      
 
 Create a client object ec2_client that allows to interact with the Amazon EC2   
 
